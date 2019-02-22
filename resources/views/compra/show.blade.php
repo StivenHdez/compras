@@ -33,9 +33,9 @@
       <td>{{ $producto->precio }}</td>
       <td>         
         @if ($producto->estado == '1')
-        Habilitado
+        <p style="color: #21BF08">Habilitado</p>
         @elseif($producto->estado == '0')
-        Inhabilitado
+        <p style="color: red">Inhabilitado</p>
         @endif 
       
       </td>

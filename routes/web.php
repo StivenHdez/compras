@@ -11,9 +11,21 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('compra.index');
-// });
-
+Route::get('/', function () {
+    return view('compra.login');
+});
 
 Route::resource('compras','ProductoController');
+
+Route::post('login','Auth\LoginController@login')->name('login');
+
+Route::get('/','Auth\LoginController@showloginform');
+
+Route::post('logout','Auth\LoginController@logout')->name('logout');
+// Route::resource('login','Aut\LoginController');
+
+
+
+
+
+
